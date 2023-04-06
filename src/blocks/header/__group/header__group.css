@@ -1,0 +1,30 @@
+.header__group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media screen and (max-width: 880px) {
+  .header__group {
+    padding-right: 27px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header__group {
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .header__group::after {
+    content: '';
+    display: block;
+    background-color: #545454;
+    opacity: 0.7;
+    height: 1px;
+    width: 100%;
+    margin-top: 40px;
+  }
+}

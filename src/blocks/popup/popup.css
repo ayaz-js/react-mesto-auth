@@ -1,0 +1,11 @@
+.popup {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
