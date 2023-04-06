@@ -3,6 +3,7 @@ import {
   Route,
   Switch,
   useHistory,
+  Redirect
 } from "react-router-dom";
 import Header from "./Header";
 import Main from "./Main";
@@ -46,18 +47,6 @@ function App() {
     setDeletePopupOpen(false);
     setIsInfoTooltipPopupOpen(false);
   }, []);
-
-  // useEffect(() => {
-  //   Api.getUserInfo()
-  //     .then((info) => setCurrentUser(info))
-  //     .catch((error) => console.log(error))
-  // }, []);
-  //
-  // useEffect(() => {
-  //   Api.getInitialCards()
-  //     .then((initialCards) => setCards(initialCards))
-  //     .catch((error) => console.log(error))
-  // }, []);
 
   const handleUpdateUser = (data) => {
     setIsLoading(true)
@@ -200,6 +189,10 @@ function App() {
 
         <Route path="/sign-up">
           <Register handleRegisterSubmit={handleRegisterSubmit} />
+        </Route>
+
+        <Route>
+          <Redirect to="/" />
         </Route>
 
       </Switch>
